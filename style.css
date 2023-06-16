@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,700&family=Volkhov:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background-color: rgb(0, 0, 35);
+  color: #fff;
+  height: 65px;
+  align-items: center;
+  display: flex;
+  font-size: 24px;
+  justify-content: center;
+  font-family: "Volkhov", serif;
+}
+ul,
+li {
+  list-style-type: none;
+}
+
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(254, 254, 254);
+  margin-top: 50px;
+  color: #040000;
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(3, 10vw);
+  grid-template-columns: repeat(3, 10vw);
+  font-family: "Montserrat", sans-serif;
+}
+.box {
+  border: 2px solid rgb(11, 0, 0);
+  font-size: 8vw;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:hover {
+  background-color: rgb(230, 219, 241);
+}
+
+.gameInfo {
+  padding: 50px;
+}
+
+.imgbox img {
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+
+.br-0 {
+  border-right: 0;
+}
+.bl-0 {
+  border-left: 0;
+}
+.bt-0 {
+  border-top: 0;
+}
+.bb-0 {
+  border-bottom: 0;
+}
+
+#reset {
+  margin: 0 23px;
+  padding: 3px 10px;
+  background-color: rgb(187, 99, 4);
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+}
+
+@media screen and (max-width: 800px) {
+  .gameContainer {
+    flex-wrap: wrap;
+  }
+
+  .gameInfo {
+    margin-top: 10px;
+  }
+
+  .gameInfo h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    grid-template-rows: repeat(3, 25vw);
+    grid-template-columns: repeat(3, 25vw);
+  }
+
+  .gameContainer {
+    margin-top: 10px;
+  }
+}
